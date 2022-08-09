@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD26EAC84ADA41567639C309 /* Pods_SwiftTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D7C5C1864011DEFD27E754 /* Pods_SwiftTest.framework */; };
+		DF6EFD7A28A24DFD008FB720 /* WeiBoNewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6EFD7928A24DFD008FB720 /* WeiBoNewsDetailsViewController.swift */; };
 		DFBBCC9928A0F4FA00E5F083 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBBCC9828A0F4FA00E5F083 /* AppDelegate.swift */; };
 		DFBBCC9B28A0F4FA00E5F083 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBBCC9A28A0F4FA00E5F083 /* SceneDelegate.swift */; };
 		DFBBCC9D28A0F4FA00E5F083 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBBCC9C28A0F4FA00E5F083 /* ViewController.swift */; };
@@ -26,11 +27,13 @@
 		DFBBCCDA28A1179500E5F083 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBBCCD928A1179500E5F083 /* UIBarButtonItem+Extension.swift */; };
 		DFBBCCDC28A1181000E5F083 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBBCCDB28A1181000E5F083 /* UIButton+Extension.swift */; };
 		DFC284F028A1209A000EDFF7 /* WeiBoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC284EF28A1209A000EDFF7 /* WeiBoLayout.swift */; };
+		DFC284F228A13E25000EDFF7 /* WeiBoStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC284F128A13E25000EDFF7 /* WeiBoStatusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		30D7C5C1864011DEFD27E754 /* Pods_SwiftTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3B915E1E45BBEE19BB43FB /* Pods-SwiftTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTest.release.xcconfig"; path = "Target Support Files/Pods-SwiftTest/Pods-SwiftTest.release.xcconfig"; sourceTree = "<group>"; };
+		DF6EFD7928A24DFD008FB720 /* WeiBoNewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiBoNewsDetailsViewController.swift; sourceTree = "<group>"; };
 		DFBBCC9528A0F4FA00E5F083 /* SwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFBBCC9828A0F4FA00E5F083 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFBBCC9A28A0F4FA00E5F083 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		DFBBCCD928A1179500E5F083 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		DFBBCCDB28A1181000E5F083 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		DFC284EF28A1209A000EDFF7 /* WeiBoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiBoLayout.swift; sourceTree = "<group>"; };
+		DFC284F128A13E25000EDFF7 /* WeiBoStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiBoStatusView.swift; sourceTree = "<group>"; };
 		F13957EC778729027657B089 /* Pods-SwiftTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTest.debug.xcconfig"; path = "Target Support Files/Pods-SwiftTest/Pods-SwiftTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				DFBBCCBF28A1089900E5F083 /* WeiBoNewsViewController.swift */,
+				DF6EFD7928A24DFD008FB720 /* WeiBoNewsDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				DFBBCCC628A1089900E5F083 /* WeiBoNewsCell.swift */,
+				DFC284F128A13E25000EDFF7 /* WeiBoStatusView.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -339,10 +345,12 @@
 				DFBBCCD428A10A4700E5F083 /* WeiBoBaseViewController.swift in Sources */,
 				DFBBCCCB28A1089A00E5F083 /* WeiBoNewsStatusModel.swift in Sources */,
 				DFBBCCDC28A1181000E5F083 /* UIButton+Extension.swift in Sources */,
+				DFC284F228A13E25000EDFF7 /* WeiBoStatusView.swift in Sources */,
 				DFBBCCBC28A107F600E5F083 /* WeiBoCommon.swift in Sources */,
 				DFBBCCCC28A1089A00E5F083 /* WeiBoNewsCell.swift in Sources */,
 				DFBBCCDA28A1179500E5F083 /* UIBarButtonItem+Extension.swift in Sources */,
 				DFBBCCD828A10F3D00E5F083 /* UIColor+Extension.swift in Sources */,
+				DF6EFD7A28A24DFD008FB720 /* WeiBoNewsDetailsViewController.swift in Sources */,
 				DFBBCCD628A10AAE00E5F083 /* WeiBoNavigationBar.swift in Sources */,
 				DFBBCCC828A1089A00E5F083 /* WeiBoNewsViewController.swift in Sources */,
 			);

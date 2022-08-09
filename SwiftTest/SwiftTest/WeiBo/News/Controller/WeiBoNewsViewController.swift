@@ -18,9 +18,18 @@ class WeiBoNewsViewController: WeiBoBaseViewController {
         for i in 0...10 {
             let model = WeiBoNewsModel()
             model.name = String(i)
-            model.isVip = 1 == i%2
+            model.isVip = 1 == i%2 ? true:false
             model.date = "2022-8-8"
             model.content = "凡十年，习近平总书记踏遍千山万水，心系千家万户。人民群众对美好生活的向往，总书记念兹在兹；人民群众的所忧所盼，总书记念之行之。"
+            
+            let status = WeiBoNewsStatusModel()
+            status.reposts_count = 123
+            status.comments_count = 123
+            status.attitudes_count = 123
+            status.is_attitudes = 1 == i%2 ? true:false
+            status.getToolCountString()
+            model.news_status = status
+            
             model.getRowHeight()
             mArray.add(model)
         }
@@ -52,6 +61,11 @@ extension WeiBoNewsViewController {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return (mArray.object(at: indexPath.row) as? WeiBoNewsModel)!.rowHeight
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let vc = WeiBoNewsDetailsViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

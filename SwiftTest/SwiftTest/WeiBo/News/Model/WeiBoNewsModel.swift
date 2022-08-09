@@ -15,7 +15,7 @@ class WeiBoNewsModel: NSObject {
     
     var avatar:String?
     
-    var isVip:Bool = false
+    var isVip = false
     
     var date:String?
     
@@ -43,6 +43,7 @@ class WeiBoNewsModel: NSObject {
         height += self.content!.boundingRect(with: textSize, options: [.usesLineFragmentOrigin],attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: WeiBoLayout.Layout(15))], context: nil).height
     
 
+        height+=bottomViewHeight
         rowHeight = height
     }
     

@@ -14,9 +14,10 @@ class WeiBoNewsCell: UITableViewCell {
     var viewModel:WeiBoNewsModel? {
         didSet {
             self.nameLable.text = viewModel?.name
-            self.dateLabel.text = "刚刚"
+            self.dateLabel.text = viewModel?.date
             self.contentLabel.text = viewModel?.content
-            
+            self.statusView.viewModel = viewModel?.news_status;
+            self.vipImageView.isHidden = viewModel?.isVip ?? true
         }
     }
     
@@ -26,6 +27,9 @@ class WeiBoNewsCell: UITableViewCell {
     var vipImageView = UIImageView(image: UIImage(named: "avatar_enterprise_vip"))
     var dateLabel = UILabel()
     var contentLabel = UILabel()
+    
+    
+    var statusView = WeiBoStatusView()
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -78,6 +82,8 @@ extension WeiBoNewsCell {
         self.contentLabel.textColor = UIColor.darkGray
         self.contentView.addSubview(self.contentLabel)
         
+        
+        self.contentView.addSubview(self.statusView)
     }
     
     func setupUI() {
@@ -87,7 +93,7 @@ extension WeiBoNewsCell {
         }
         self.avatarImageView.snp.makeConstraints { make in
             make.left.equalTo(WeiBoLayout.Layout(StatusPictureOutterMargin))
-            make.top.equalTo(self.topLineView.snp_bottomMargin).offset(WeiBoLayout.Layout(StatusPictureOutterMargin))
+            make.top.equalTo(self.topLineView.snp.bottom).offset(WeiBoLayout.Layout(StatusPictureOutterMargin))
             make.size.equalTo(WeiBoLayout.Layout(38))
         }
         self.vipImageView.snp.makeConstraints { (make) in
@@ -111,6 +117,12 @@ extension WeiBoNewsCell {
             make.right.equalToSuperview().offset(-WeiBoLayout.Layout(StatusPictureOutterMargin))
         }
         
+        
+        self.statusView.snp.makeConstraints { make in
+            make.left.right.bottom.equalToSuperview()
+            make.height.equalTo(WeiBoLayout.Layout(35))
+            
+        }
         
     }
     
